@@ -1,0 +1,1340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2 (Python 3.8.5 on linux)" generated="20201002 04:32:17.376" rpa="false">
+<suite id="s1" name="Tests" source="/opt/robotframework/tlscripts/Tests">
+<suite id="s1-s1" name="Tl-Site" source="/opt/robotframework/tlscripts/Tests/tl-site.robot">
+<test id="s1-s1-t1" name="Should be able to access the Home page">
+<kw name="Begin Web Test" library="CommonWeb" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20201002 04:32:17.590" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20201002 04:32:17.589" endtime="20201002 04:32:19.310"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201002 04:32:19.311" endtime="20201002 04:32:19.429"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:17.588" endtime="20201002 04:32:19.430"></status>
+</kw>
+<kw name="Go to Home Page" library="Actions">
+<kw name="Navigate To" library="HomePage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20201002 04:32:19.434" level="INFO">Opening url 'http://www.tlconsulting.com.au'</msg>
+<status status="PASS" starttime="20201002 04:32:19.434" endtime="20201002 04:32:22.263"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:19.431" endtime="20201002 04:32:22.265"></status>
+</kw>
+<kw name="Verify Page Loaded" library="HomePage">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${HOME_PAGE_ELEMENT}</arg>
+</arguments>
+<status status="PASS" starttime="20201002 04:32:22.266" endtime="20201002 04:32:22.309"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:22.265" endtime="20201002 04:32:22.309"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:19.430" endtime="20201002 04:32:22.309"></status>
+</kw>
+<kw name="End Web Test" library="CommonWeb" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20201002 04:32:22.311" endtime="20201002 04:32:22.373"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:22.310" endtime="20201002 04:32:22.373"></status>
+</kw>
+<doc>This is a Home Page test</doc>
+<tags>
+<tag>home-page-test</tag>
+</tags>
+<status status="PASS" starttime="20201002 04:32:17.586" endtime="20201002 04:32:22.373" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="Should be able to access the &quot;About&quot; Section">
+<kw name="Begin Web Test" library="CommonWeb" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20201002 04:32:22.377" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20201002 04:32:22.376" endtime="20201002 04:32:23.747"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201002 04:32:23.748" endtime="20201002 04:32:23.864"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:22.375" endtime="20201002 04:32:23.864"></status>
+</kw>
+<kw name="Go to Home Page" library="Actions">
+<kw name="Navigate To" library="HomePage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20201002 04:32:23.866" level="INFO">Opening url 'http://www.tlconsulting.com.au'</msg>
+<status status="PASS" starttime="20201002 04:32:23.866" endtime="20201002 04:32:26.161"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:23.865" endtime="20201002 04:32:26.162"></status>
+</kw>
+<kw name="Verify Page Loaded" library="HomePage">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${HOME_PAGE_ELEMENT}</arg>
+</arguments>
+<status status="PASS" starttime="20201002 04:32:26.162" endtime="20201002 04:32:26.194"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:26.162" endtime="20201002 04:32:26.195"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:23.865" endtime="20201002 04:32:26.195"></status>
+</kw>
+<kw name="Go to &quot;About&quot; Section" library="Actions">
+<kw name="Click &quot;About&quot; Link" library="TopNav">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TOP_NAV_ABOUT_LINK}</arg>
+</arguments>
+<msg timestamp="20201002 04:32:26.197" level="INFO">Clicking element 'xpath=//*[@id="menu-item-26022"]/a'.</msg>
+<status status="PASS" starttime="20201002 04:32:26.196" endtime="20201002 04:32:26.278"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20201002 04:32:28.279" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20201002 04:32:26.278" endtime="20201002 04:32:28.279"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:26.196" endtime="20201002 04:32:28.280"></status>
+</kw>
+<kw name="Verify &quot;About&quot; Section is visible" library="HomePage">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${ABOUT_SECTION_ELEMENT}</arg>
+</arguments>
+<msg timestamp="20201002 04:32:28.316" level="INFO">Element 'xpath=//*[@id="et-boc"]/div/div/div[6]' is displayed.</msg>
+<status status="PASS" starttime="20201002 04:32:28.280" endtime="20201002 04:32:28.317"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:28.280" endtime="20201002 04:32:28.317"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:26.195" endtime="20201002 04:32:28.317"></status>
+</kw>
+<kw name="End Web Test" library="CommonWeb" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20201002 04:32:28.318" endtime="20201002 04:32:28.379"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:28.317" endtime="20201002 04:32:28.379"></status>
+</kw>
+<doc>This is a Home Page about section test</doc>
+<tags>
+<tag>home-page-about-test</tag>
+</tags>
+<status status="PASS" starttime="20201002 04:32:22.374" endtime="20201002 04:32:28.380" critical="yes"></status>
+</test>
+<test id="s1-s1-t3" name="Should be able to access the &quot;Technology Partners&quot; Page">
+<kw name="Begin Web Test" library="CommonWeb" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20201002 04:32:28.383" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20201002 04:32:28.383" endtime="20201002 04:32:29.806"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201002 04:32:29.807" endtime="20201002 04:32:29.928"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:28.382" endtime="20201002 04:32:29.928"></status>
+</kw>
+<kw name="Go to Home Page" library="Actions">
+<kw name="Navigate To" library="HomePage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20201002 04:32:29.932" level="INFO">Opening url 'http://www.tlconsulting.com.au'</msg>
+<status status="PASS" starttime="20201002 04:32:29.931" endtime="20201002 04:32:32.335"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:29.930" endtime="20201002 04:32:32.336"></status>
+</kw>
+<kw name="Verify Page Loaded" library="HomePage">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${HOME_PAGE_ELEMENT}</arg>
+</arguments>
+<status status="PASS" starttime="20201002 04:32:32.337" endtime="20201002 04:32:32.362"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:32.336" endtime="20201002 04:32:32.362"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:29.929" endtime="20201002 04:32:32.362"></status>
+</kw>
+<kw name="Go to &quot;Technology Partners&quot; Page" library="Actions">
+<kw name="Hover On &quot;Solutions &amp; Partners&quot; Tab" library="TopNav">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${TOP_NAV_SOLUTIONS_AND_PARTNERS_TAB}</arg>
+</arguments>
+<msg timestamp="20201002 04:32:32.363" level="INFO">Simulating Mouse Over on element 'xpath=//*[@id="menu-item-25893"]'.</msg>
+<status status="PASS" starttime="20201002 04:32:32.363" endtime="20201002 04:32:32.661"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20201002 04:32:34.662" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20201002 04:32:32.661" endtime="20201002 04:32:34.663"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:32.363" endtime="20201002 04:32:34.663"></status>
+</kw>
+<kw name="Verify &quot;Technology Partners&quot; Submenu Is Visible" library="TopNav">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${TOP_NAV_SUBMENU_TECHNOLOGY_PARTNERS_ITEM}</arg>
+</arguments>
+<msg timestamp="20201002 04:32:34.721" level="INFO">Element 'xpath=//*[@id="menu-item-25894"]' is displayed.</msg>
+<status status="PASS" starttime="20201002 04:32:34.665" endtime="20201002 04:32:34.722"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:34.664" endtime="20201002 04:32:34.722"></status>
+</kw>
+<kw name="Click On &quot;Technology Partners&quot; Submenu Link" library="TopNav">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TOP_NAV_SUBMENU_TECHNOLOGY_PARTNERS_LINK}</arg>
+</arguments>
+<msg timestamp="20201002 04:32:34.723" level="INFO">Clicking element 'xpath=//*[@id="menu-item-25894"]/a'.</msg>
+<status status="PASS" starttime="20201002 04:32:34.723" endtime="20201002 04:32:35.446"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20201002 04:32:37.447" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20201002 04:32:35.447" endtime="20201002 04:32:37.448"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:34.722" endtime="20201002 04:32:37.448"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:32.362" endtime="20201002 04:32:37.448"></status>
+</kw>
+<kw name="End Web Test" library="CommonWeb" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20201002 04:32:37.450" endtime="20201002 04:32:37.512"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:37.449" endtime="20201002 04:32:37.513"></status>
+</kw>
+<doc>This is a Technology partners Page test</doc>
+<tags>
+<tag>tech-partners-page-test</tag>
+</tags>
+<status status="PASS" starttime="20201002 04:32:28.380" endtime="20201002 04:32:37.513" critical="yes"></status>
+</test>
+<test id="s1-s1-t4" name="Should be able to access the &quot;Knowledge Portal&quot; Pages">
+<kw name="Begin Web Test" library="CommonWeb" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20201002 04:32:37.518" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20201002 04:32:37.517" endtime="20201002 04:32:38.948"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201002 04:32:38.949" endtime="20201002 04:32:39.062"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:37.515" endtime="20201002 04:32:39.063"></status>
+</kw>
+<kw name="Go to Home Page" library="Actions">
+<kw name="Navigate To" library="HomePage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20201002 04:32:39.064" level="INFO">Opening url 'http://www.tlconsulting.com.au'</msg>
+<status status="PASS" starttime="20201002 04:32:39.064" endtime="20201002 04:32:41.535"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:39.064" endtime="20201002 04:32:41.536"></status>
+</kw>
+<kw name="Verify Page Loaded" library="HomePage">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${HOME_PAGE_ELEMENT}</arg>
+</arguments>
+<status status="PASS" starttime="20201002 04:32:41.536" endtime="20201002 04:32:41.569"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:41.536" endtime="20201002 04:32:41.569"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:39.063" endtime="20201002 04:32:41.569"></status>
+</kw>
+<kw name="Go to &quot;Knowledge Portal&quot; Page" library="Actions">
+<kw name="Hover On &quot;Knowledge Portal&quot; Tab" library="TopNav">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${TOP_NAV_KNOWLEDGE_PORTAL_TAB}</arg>
+</arguments>
+<msg timestamp="20201002 04:32:41.571" level="INFO">Simulating Mouse Over on element 'xpath=//*[@id="menu-item-25938"]'.</msg>
+<status status="PASS" starttime="20201002 04:32:41.571" endtime="20201002 04:32:41.881"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20201002 04:32:43.883" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20201002 04:32:41.882" endtime="20201002 04:32:43.883"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:41.570" endtime="20201002 04:32:43.884"></status>
+</kw>
+<kw name="Verify &quot;Knowledge Portal&quot; Submenu Is Visible" library="TopNav">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${TOP_NAV_KNOWLEDGE_PORTAL_SUBMENU}</arg>
+</arguments>
+<msg timestamp="20201002 04:32:43.930" level="INFO">Element 'xpath=//*[@id="menu-item-25938"]/ul' is displayed.</msg>
+<status status="PASS" starttime="20201002 04:32:43.886" endtime="20201002 04:32:43.930"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:43.885" endtime="20201002 04:32:43.930"></status>
+</kw>
+<kw name="Click on &quot;Case Study - Leading Bank&quot; Link" library="TopNav">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TOP_NAV_LEADING_BANK_LINK}</arg>
+</arguments>
+<msg timestamp="20201002 04:32:43.931" level="INFO">Clicking element 'xpath=//*[@id="menu-item-25941"]/a'.</msg>
+<status status="PASS" starttime="20201002 04:32:43.930" endtime="20201002 04:32:44.068"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20201002 04:32:46.070" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20201002 04:32:44.068" endtime="20201002 04:32:46.071"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:43.930" endtime="20201002 04:32:46.072"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:41.570" endtime="20201002 04:32:46.073"></status>
+</kw>
+<kw name="End Web Test" library="CommonWeb" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20201002 04:32:46.077" endtime="20201002 04:32:46.145"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:46.075" endtime="20201002 04:32:46.146"></status>
+</kw>
+<doc>This is a Knowledge portal test</doc>
+<tags>
+<tag>knowledge-portal-test</tag>
+</tags>
+<status status="PASS" starttime="20201002 04:32:37.513" endtime="20201002 04:32:46.146" critical="yes"></status>
+</test>
+<test id="s1-s1-t5" name="Should be able to access &quot;Careers&quot; page on Navbar">
+<kw name="Begin Web Test" library="CommonWeb" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20201002 04:32:46.152" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20201002 04:32:46.151" endtime="20201002 04:32:47.571"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201002 04:32:47.571" endtime="20201002 04:32:47.683"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:46.149" endtime="20201002 04:32:47.683"></status>
+</kw>
+<kw name="Go to Home Page" library="Actions">
+<kw name="Navigate To" library="HomePage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20201002 04:32:47.685" level="INFO">Opening url 'http://www.tlconsulting.com.au'</msg>
+<status status="PASS" starttime="20201002 04:32:47.685" endtime="20201002 04:32:50.060"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:47.684" endtime="20201002 04:32:50.060"></status>
+</kw>
+<kw name="Verify Page Loaded" library="HomePage">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${HOME_PAGE_ELEMENT}</arg>
+</arguments>
+<status status="PASS" starttime="20201002 04:32:50.061" endtime="20201002 04:32:50.088"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:50.060" endtime="20201002 04:32:50.089"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:47.683" endtime="20201002 04:32:50.089"></status>
+</kw>
+<kw name="Go to &quot;Careers&quot; Page On Navbar" library="Actions">
+<kw name="Click &quot;Careers&quot; Link" library="TopNav">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TOP_NAV_CAREERS_LINK}</arg>
+</arguments>
+<msg timestamp="20201002 04:32:50.090" level="INFO">Clicking element 'xpath=//*[@id="menu-item-25900"]/a'.</msg>
+<status status="PASS" starttime="20201002 04:32:50.090" endtime="20201002 04:32:50.748"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20201002 04:32:52.749" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20201002 04:32:50.748" endtime="20201002 04:32:52.749"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:50.089" endtime="20201002 04:32:52.749"></status>
+</kw>
+<kw name="Verify Page Loaded" library="Careers">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${CAREERS_HEADER_LABEL}</arg>
+</arguments>
+<status status="PASS" starttime="20201002 04:32:52.750" endtime="20201002 04:32:52.766"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:52.749" endtime="20201002 04:32:52.766"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:50.089" endtime="20201002 04:32:52.766"></status>
+</kw>
+<kw name="Validate &quot;Careers&quot; Page" library="Actions">
+<kw name="Validate Page Contents" library="Careers">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${CAREERS_HEADER_LABEL}</arg>
+</arguments>
+<assign>
+<var>${ElementText}</var>
+</assign>
+<msg timestamp="20201002 04:32:52.796" level="INFO">${ElementText} = Careers</msg>
+<status status="PASS" starttime="20201002 04:32:52.768" endtime="20201002 04:32:52.796"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${ElementText}</arg>
+<arg>Careers</arg>
+<arg>ignore_case=true</arg>
+</arguments>
+<status status="PASS" starttime="20201002 04:32:52.796" endtime="20201002 04:32:52.797"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${CAREERS_JOB_BOARD}</arg>
+</arguments>
+<msg timestamp="20201002 04:32:52.812" level="INFO">Current page contains element 'xpath=//*[@id="et-boc"]/div/div/div[3]/div/div'.</msg>
+<status status="PASS" starttime="20201002 04:32:52.797" endtime="20201002 04:32:52.812"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${COVID_SAFE_LABEL}</arg>
+</arguments>
+<assign>
+<var>${CovidSafeText}</var>
+</assign>
+<msg timestamp="20201002 04:32:52.845" level="INFO">${CovidSafeText} = COVID SAFE</msg>
+<status status="PASS" starttime="20201002 04:32:52.813" endtime="20201002 04:32:52.845"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${CovidSafeText}</arg>
+<arg>COVID SAFE</arg>
+</arguments>
+<status status="PASS" starttime="20201002 04:32:52.845" endtime="20201002 04:32:52.846"></status>
+</kw>
+<kw name="Page Should Contain Image" library="SeleniumLibrary">
+<doc>Verifies image identified by ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${COVID_SAFE_LOGO}</arg>
+</arguments>
+<msg timestamp="20201002 04:32:52.870" level="INFO">Current page contains image 'xpath=//*[@id="et-boc"]/div/div/div[4]/div/div/div[5]/span/img'.</msg>
+<status status="PASS" starttime="20201002 04:32:52.846" endtime="20201002 04:32:52.870"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:52.767" endtime="20201002 04:32:52.870"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:52.767" endtime="20201002 04:32:52.870"></status>
+</kw>
+<kw name="End Web Test" library="CommonWeb" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20201002 04:32:52.871" endtime="20201002 04:32:52.935"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:52.870" endtime="20201002 04:32:52.935"></status>
+</kw>
+<doc>This is a Careers Page test By clicking the nav bar</doc>
+<tags>
+<tag>career-navbar-test</tag>
+</tags>
+<status status="PASS" starttime="20201002 04:32:46.146" endtime="20201002 04:32:52.935" critical="yes"></status>
+</test>
+<test id="s1-s1-t6" name="Should be able to interact with job board on &quot;Careers&quot; page">
+<kw name="Begin Web Test" library="CommonWeb" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20201002 04:32:52.939" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20201002 04:32:52.938" endtime="20201002 04:32:54.491"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201002 04:32:54.492" endtime="20201002 04:32:54.606"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:52.937" endtime="20201002 04:32:54.606"></status>
+</kw>
+<kw name="Go to Home Page" library="Actions">
+<kw name="Navigate To" library="HomePage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20201002 04:32:54.608" level="INFO">Opening url 'http://www.tlconsulting.com.au'</msg>
+<status status="PASS" starttime="20201002 04:32:54.608" endtime="20201002 04:32:58.223"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:54.607" endtime="20201002 04:32:58.224"></status>
+</kw>
+<kw name="Verify Page Loaded" library="HomePage">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${HOME_PAGE_ELEMENT}</arg>
+</arguments>
+<status status="PASS" starttime="20201002 04:32:58.224" endtime="20201002 04:32:58.258"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:58.224" endtime="20201002 04:32:58.258"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:54.607" endtime="20201002 04:32:58.258"></status>
+</kw>
+<kw name="Go to &quot;Careers&quot; Page On Navbar" library="Actions">
+<kw name="Click &quot;Careers&quot; Link" library="TopNav">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TOP_NAV_CAREERS_LINK}</arg>
+</arguments>
+<msg timestamp="20201002 04:32:58.259" level="INFO">Clicking element 'xpath=//*[@id="menu-item-25900"]/a'.</msg>
+<status status="PASS" starttime="20201002 04:32:58.259" endtime="20201002 04:32:58.955"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20201002 04:33:00.956" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20201002 04:32:58.955" endtime="20201002 04:33:00.957"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:58.259" endtime="20201002 04:33:00.957"></status>
+</kw>
+<kw name="Verify Page Loaded" library="Careers">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${CAREERS_HEADER_LABEL}</arg>
+</arguments>
+<status status="PASS" starttime="20201002 04:33:00.957" endtime="20201002 04:33:00.977"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:00.957" endtime="20201002 04:33:00.977"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:32:58.258" endtime="20201002 04:33:00.977"></status>
+</kw>
+<kw name="Validate Job Board Search Function in the &quot;Careers&quot; Page" library="Actions">
+<kw name="Validate Existing Result By Searching Keywords In Job Board" library="JobBoard">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${CAREERS_KEYWORD_INPUT_FIELD}</arg>
+<arg>Salesforce</arg>
+</arguments>
+<msg timestamp="20201002 04:33:00.978" level="INFO">Typing text 'Salesforce' into text field 'xpath=//*[@id="search_keywords"]'.</msg>
+<status status="PASS" starttime="20201002 04:33:00.978" endtime="20201002 04:33:01.380"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${SEARCH_JOB_BUTTON}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:01.381" level="INFO">Clicking button 'xpath=//*[@id="et-boc"]/div/div/div[3]/div/div/div[2]/div/div/form/div[1]/div[4]/input'.</msg>
+<status status="PASS" starttime="20201002 04:33:01.381" endtime="20201002 04:33:01.631"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_MSG}</arg>
+</arguments>
+<status status="PASS" starttime="20201002 04:33:01.631" endtime="20201002 04:33:02.375"></status>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies the current page does not contain ``text``.</doc>
+<arguments>
+<arg>${SEARCH_JOBS_NO_RESULTS_TEXT}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:02.407" level="INFO">Current page does not contain text 'There are no listings matching your search.'.</msg>
+<status status="PASS" starttime="20201002 04:33:02.376" endtime="20201002 04:33:02.408"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${JOB_RESET_LINK}</arg>
+</arguments>
+<status status="PASS" starttime="20201002 04:33:02.408" endtime="20201002 04:33:02.432"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${JOB_RESET_LINK}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:02.433" level="INFO">Clicking link 'xpath=//*[@id="et-boc"]/div/div/div[3]/div/div/div[2]/div/div/form/div[2]/a[1]'.</msg>
+<status status="PASS" starttime="20201002 04:33:02.433" endtime="20201002 04:33:02.498"></status>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_MSG}</arg>
+</arguments>
+<status status="PASS" starttime="20201002 04:33:02.499" endtime="20201002 04:33:02.516"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:00.978" endtime="20201002 04:33:02.516"></status>
+</kw>
+<kw name="Validate Existing Result By Searching Location In Job Board" library="JobBoard">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${CAREERS_LOCATION_INPUT_FIELD}</arg>
+<arg>Sydney</arg>
+</arguments>
+<msg timestamp="20201002 04:33:02.517" level="INFO">Typing text 'Sydney' into text field 'xpath=//*[@id="search_location"]'.</msg>
+<status status="PASS" starttime="20201002 04:33:02.517" endtime="20201002 04:33:02.648"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${SEARCH_JOB_BUTTON}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:02.649" level="INFO">Clicking button 'xpath=//*[@id="et-boc"]/div/div/div[3]/div/div/div[2]/div/div/form/div[1]/div[4]/input'.</msg>
+<status status="PASS" starttime="20201002 04:33:02.648" endtime="20201002 04:33:02.723"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_MSG}</arg>
+</arguments>
+<status status="PASS" starttime="20201002 04:33:02.724" endtime="20201002 04:33:02.751"></status>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies the current page does not contain ``text``.</doc>
+<arguments>
+<arg>${SEARCH_JOBS_NO_RESULTS_TEXT}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:02.776" level="INFO">Current page does not contain text 'There are no listings matching your search.'.</msg>
+<status status="PASS" starttime="20201002 04:33:02.751" endtime="20201002 04:33:02.776"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${JOB_RESET_LINK}</arg>
+</arguments>
+<status status="PASS" starttime="20201002 04:33:02.776" endtime="20201002 04:33:02.795"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${JOB_RESET_LINK}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:02.796" level="INFO">Clicking link 'xpath=//*[@id="et-boc"]/div/div/div[3]/div/div/div[2]/div/div/form/div[2]/a[1]'.</msg>
+<status status="PASS" starttime="20201002 04:33:02.795" endtime="20201002 04:33:02.848"></status>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_MSG}</arg>
+</arguments>
+<status status="PASS" starttime="20201002 04:33:02.848" endtime="20201002 04:33:02.859"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:02.516" endtime="20201002 04:33:02.859"></status>
+</kw>
+<kw name="Validate Existing Result By Searching Keyword And Location In Job Board" library="JobBoard">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${CAREERS_KEYWORD_INPUT_FIELD}</arg>
+<arg>devops</arg>
+</arguments>
+<msg timestamp="20201002 04:33:02.860" level="INFO">Typing text 'devops' into text field 'xpath=//*[@id="search_keywords"]'.</msg>
+<status status="PASS" starttime="20201002 04:33:02.860" endtime="20201002 04:33:02.943"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${CAREERS_LOCATION_INPUT_FIELD}</arg>
+<arg>Sydney</arg>
+</arguments>
+<msg timestamp="20201002 04:33:02.944" level="INFO">Typing text 'Sydney' into text field 'xpath=//*[@id="search_location"]'.</msg>
+<status status="PASS" starttime="20201002 04:33:02.944" endtime="20201002 04:33:03.060"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${SEARCH_JOB_BUTTON}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:03.061" level="INFO">Clicking button 'xpath=//*[@id="et-boc"]/div/div/div[3]/div/div/div[2]/div/div/form/div[1]/div[4]/input'.</msg>
+<status status="PASS" starttime="20201002 04:33:03.061" endtime="20201002 04:33:03.114"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_MSG}</arg>
+</arguments>
+<status status="PASS" starttime="20201002 04:33:03.115" endtime="20201002 04:33:03.138"></status>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies the current page does not contain ``text``.</doc>
+<arguments>
+<arg>${SEARCH_JOBS_NO_RESULTS_TEXT}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:03.168" level="INFO">Current page does not contain text 'There are no listings matching your search.'.</msg>
+<status status="PASS" starttime="20201002 04:33:03.138" endtime="20201002 04:33:03.169"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${JOB_RESET_LINK}</arg>
+</arguments>
+<status status="PASS" starttime="20201002 04:33:03.169" endtime="20201002 04:33:03.219"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${JOB_RESET_LINK}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:03.222" level="INFO">Clicking link 'xpath=//*[@id="et-boc"]/div/div/div[3]/div/div/div[2]/div/div/form/div[2]/a[1]'.</msg>
+<status status="PASS" starttime="20201002 04:33:03.219" endtime="20201002 04:33:03.349"></status>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_MSG}</arg>
+</arguments>
+<status status="PASS" starttime="20201002 04:33:03.350" endtime="20201002 04:33:03.366"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:02.860" endtime="20201002 04:33:03.366"></status>
+</kw>
+<kw name="Validate Non Existing Result By Searching Location In Job Board" library="JobBoard">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${CAREERS_LOCATION_INPUT_FIELD}</arg>
+<arg>London</arg>
+</arguments>
+<msg timestamp="20201002 04:33:03.367" level="INFO">Typing text 'London' into text field 'xpath=//*[@id="search_location"]'.</msg>
+<status status="PASS" starttime="20201002 04:33:03.367" endtime="20201002 04:33:03.487"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${SEARCH_JOB_BUTTON}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:03.488" level="INFO">Clicking button 'xpath=//*[@id="et-boc"]/div/div/div[3]/div/div/div[2]/div/div/form/div[1]/div[4]/input'.</msg>
+<status status="PASS" starttime="20201002 04:33:03.487" endtime="20201002 04:33:03.547"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${SEARCH_JOBS_NO_RESULTS_TEXT}</arg>
+</arguments>
+<status status="PASS" starttime="20201002 04:33:03.547" endtime="20201002 04:33:04.874"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201002 04:33:05.875" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201002 04:33:04.874" endtime="20201002 04:33:05.876"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:03.366" endtime="20201002 04:33:05.876"></status>
+</kw>
+<kw name="Validate Searching When Both Input Fields Are Empty" library="JobBoard">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>${CAREERS_KEYWORD_INPUT_FIELD}</arg>
+</arguments>
+<status status="PASS" starttime="20201002 04:33:05.878" endtime="20201002 04:33:05.959"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>${CAREERS_LOCATION_INPUT_FIELD}</arg>
+</arguments>
+<status status="PASS" starttime="20201002 04:33:05.959" endtime="20201002 04:33:06.011"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${SEARCH_JOB_BUTTON}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:06.012" level="INFO">Clicking button 'xpath=//*[@id="et-boc"]/div/div/div[3]/div/div/div[2]/div/div/form/div[1]/div[4]/input'.</msg>
+<status status="PASS" starttime="20201002 04:33:06.011" endtime="20201002 04:33:06.095"></status>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_MSG}</arg>
+</arguments>
+<status status="PASS" starttime="20201002 04:33:06.095" endtime="20201002 04:33:06.107"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201002 04:33:07.108" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201002 04:33:06.107" endtime="20201002 04:33:07.108"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:05.877" endtime="20201002 04:33:07.109"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:00.977" endtime="20201002 04:33:07.109"></status>
+</kw>
+<kw name="Validate Job Board Check Box in the &quot;Careers&quot; Page" library="Actions">
+<kw name="Validate Checkbox Function" library="JobBoard">
+<kw name="Unselect Checkbox" library="SeleniumLibrary">
+<doc>Removes the selection of checkbox identified by ``locator``.</doc>
+<arguments>
+<arg>${CONTRACT_CHECK_BOX}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:07.112" level="INFO">Unselecting checkbox 'xpath=//*[@id="job_type_temporary"]'.</msg>
+<status status="PASS" starttime="20201002 04:33:07.112" endtime="20201002 04:33:07.277"></status>
+</kw>
+<kw name="Wait Until Element Does Not Contain" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` does not contain ``text``.</doc>
+<arguments>
+<arg>${JOB_LISTINGS_ELEMENT}</arg>
+<arg>Contract</arg>
+</arguments>
+<status status="PASS" starttime="20201002 04:33:07.277" endtime="20201002 04:33:07.315"></status>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<arguments>
+<arg>${CONTRACT_CHECK_BOX}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:07.316" level="INFO">Selecting checkbox 'xpath=//*[@id="job_type_temporary"]'.</msg>
+<status status="PASS" starttime="20201002 04:33:07.316" endtime="20201002 04:33:07.411"></status>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<arguments>
+<arg>${JOB_LISTINGS_ELEMENT}</arg>
+<arg>Contract</arg>
+</arguments>
+<status status="PASS" starttime="20201002 04:33:07.411" endtime="20201002 04:33:10.090"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:07.111" endtime="20201002 04:33:10.091"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:07.110" endtime="20201002 04:33:10.091"></status>
+</kw>
+<kw name="End Web Test" library="CommonWeb" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20201002 04:33:10.091" endtime="20201002 04:33:10.160"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:10.091" endtime="20201002 04:33:10.160"></status>
+</kw>
+<doc>This is a Job Board test on Careers Page</doc>
+<tags>
+<tag>career-job-board-test</tag>
+</tags>
+<status status="PASS" starttime="20201002 04:32:52.936" endtime="20201002 04:33:10.160" critical="yes"></status>
+</test>
+<test id="s1-s1-t7" name="Should be able to access the &quot;Contact Us&quot; Section">
+<kw name="Begin Web Test" library="CommonWeb" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:10.164" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20201002 04:33:10.163" endtime="20201002 04:33:11.579"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201002 04:33:11.579" endtime="20201002 04:33:11.695"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:10.162" endtime="20201002 04:33:11.696"></status>
+</kw>
+<kw name="Go to Home Page" library="Actions">
+<kw name="Navigate To" library="HomePage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:11.697" level="INFO">Opening url 'http://www.tlconsulting.com.au'</msg>
+<status status="PASS" starttime="20201002 04:33:11.697" endtime="20201002 04:33:16.068"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:11.697" endtime="20201002 04:33:16.068"></status>
+</kw>
+<kw name="Verify Page Loaded" library="HomePage">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${HOME_PAGE_ELEMENT}</arg>
+</arguments>
+<status status="PASS" starttime="20201002 04:33:16.069" endtime="20201002 04:33:16.098"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:16.069" endtime="20201002 04:33:16.098"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:11.696" endtime="20201002 04:33:16.098"></status>
+</kw>
+<kw name="Go to &quot;Contact Us&quot; Section" library="Actions">
+<kw name="Click &quot;Contact Us&quot; Link" library="TopNav">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TOP_NAV_CONTACT_US_LINK}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:16.100" level="INFO">Clicking element 'xpath=//*[@id="menu-item-25902"]/a'.</msg>
+<status status="PASS" starttime="20201002 04:33:16.100" endtime="20201002 04:33:16.216"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20201002 04:33:18.219" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20201002 04:33:16.218" endtime="20201002 04:33:18.219"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:16.099" endtime="20201002 04:33:18.219"></status>
+</kw>
+<kw name="Verify &quot;Contact Us&quot; Section is visible" library="ContactUs">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${CONTACT_US_SECTION_ELEMENT}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:18.257" level="INFO">Element 'id:contact' is displayed.</msg>
+<status status="PASS" starttime="20201002 04:33:18.220" endtime="20201002 04:33:18.257"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:18.220" endtime="20201002 04:33:18.258"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:16.099" endtime="20201002 04:33:18.258"></status>
+</kw>
+<kw name="End Web Test" library="CommonWeb" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20201002 04:33:18.258" endtime="20201002 04:33:18.319"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:18.258" endtime="20201002 04:33:18.319"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:10.161" endtime="20201002 04:33:18.319" critical="yes"></status>
+</test>
+<test id="s1-s1-t8" name="Should be able to access &quot;DevOps&quot; page on Footer">
+<kw name="Begin Web Test" library="CommonWeb" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:18.323" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20201002 04:33:18.323" endtime="20201002 04:33:19.803"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201002 04:33:19.803" endtime="20201002 04:33:19.924"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:18.322" endtime="20201002 04:33:19.925"></status>
+</kw>
+<kw name="Go to Home Page" library="Actions">
+<kw name="Navigate To" library="HomePage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:19.928" level="INFO">Opening url 'http://www.tlconsulting.com.au'</msg>
+<status status="PASS" starttime="20201002 04:33:19.927" endtime="20201002 04:33:22.999"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:19.926" endtime="20201002 04:33:23.000"></status>
+</kw>
+<kw name="Verify Page Loaded" library="HomePage">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${HOME_PAGE_ELEMENT}</arg>
+</arguments>
+<status status="PASS" starttime="20201002 04:33:23.001" endtime="20201002 04:33:23.050"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:23.000" endtime="20201002 04:33:23.050"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:19.925" endtime="20201002 04:33:23.051"></status>
+</kw>
+<kw name="Go to &quot;DevOps Services&quot; Page On Footer" library="Actions">
+<kw name="Click &quot;DevOps Services&quot; Link" library="Footer">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${FOOTER_DEVOPS_SERVICE_LINK}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:23.056" level="INFO">Clicking element 'xpath=//*[@id="first-on-mobile"]/div[2]/div/p[1]/span/a'.</msg>
+<status status="PASS" starttime="20201002 04:33:23.052" endtime="20201002 04:33:24.204"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20201002 04:33:26.205" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20201002 04:33:24.204" endtime="20201002 04:33:26.206"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:23.051" endtime="20201002 04:33:26.206"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:23.051" endtime="20201002 04:33:26.207"></status>
+</kw>
+<kw name="End Web Test" library="CommonWeb" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20201002 04:33:26.208" endtime="20201002 04:33:26.275"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:26.207" endtime="20201002 04:33:26.275"></status>
+</kw>
+<doc>This is a DevOps Page test By clicking the link in the footer</doc>
+<tags>
+<tag>devops-services-footer-test</tag>
+</tags>
+<status status="PASS" starttime="20201002 04:33:18.320" endtime="20201002 04:33:26.275" critical="yes"></status>
+</test>
+<test id="s1-s1-t9" name="Should be able to login in from &quot;Post A Job&quot; page">
+<kw name="Begin Web Test" library="CommonWeb" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:26.286" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20201002 04:33:26.285" endtime="20201002 04:33:27.707"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201002 04:33:27.707" endtime="20201002 04:33:27.837"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:26.284" endtime="20201002 04:33:27.838"></status>
+</kw>
+<kw name="Go to &quot;Post A Job&quot; Page" library="Actions">
+<kw name="Navigate To" library="PostAJob">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${POST_A_JOB_LINK}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:27.841" level="INFO">Opening url 'https://staging2.tlconsulting.com.au/post-a-job/'</msg>
+<status status="PASS" starttime="20201002 04:33:27.841" endtime="20201002 04:33:28.827"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:27.840" endtime="20201002 04:33:28.828"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201002 04:33:29.829" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201002 04:33:28.828" endtime="20201002 04:33:29.829"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:27.839" endtime="20201002 04:33:29.830"></status>
+</kw>
+<kw name="Sign In From &quot;Post A Job&quot; Page" library="Actions">
+<kw name="Click &quot;Sign in&quot; Link" library="PostAJob">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${SIGN_IN_LINK}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:29.832" level="INFO">Clicking link 'xpath=//*[@id="submit-job-form"]/fieldset/div/a'.</msg>
+<status status="PASS" starttime="20201002 04:33:29.832" endtime="20201002 04:33:31.127"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:29.831" endtime="20201002 04:33:31.127"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:29.830" endtime="20201002 04:33:31.128"></status>
+</kw>
+<kw name="Login User" library="CommonWeb">
+<kw name="Get Location" library="SeleniumLibrary">
+<doc>Returns the current browser window URL.</doc>
+<assign>
+<var>${CURRENT_URL}</var>
+</assign>
+<msg timestamp="20201002 04:33:31.137" level="INFO">${CURRENT_URL} = https://staging2.tlconsulting.com.au/wp-login.php?redirect_to=https%3A%2F%2Fstaging2.tlconsulting.com.au%2Fpost-a-job%2F</msg>
+<status status="PASS" starttime="20201002 04:33:31.128" endtime="20201002 04:33:31.137"></status>
+</kw>
+<kw name="Should Match" library="BuiltIn">
+<doc>Fails if the given ``string`` does not match the given ``pattern``.</doc>
+<arguments>
+<arg>${CURRENT_URL}</arg>
+<arg>pattern=https://staging2.tlconsulting.com.au/wp-login.php*</arg>
+</arguments>
+<status status="PASS" starttime="20201002 04:33:31.137" endtime="20201002 04:33:31.138"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_USER_FIELD}</arg>
+<arg>${LOGIN_USER}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:31.139" level="INFO">Typing text 'PSTester' into text field 'xpath=//*[@id="user_login"]'.</msg>
+<status status="PASS" starttime="20201002 04:33:31.139" endtime="20201002 04:33:31.307"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_PASSWORD_FIELD}</arg>
+<arg>${LOGIN_PASSWORD}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:31.308" level="INFO">Typing password into text field 'xpath=//*[@id="user_pass"]'.</msg>
+<msg timestamp="20201002 04:33:31.462" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20201002 04:33:31.561" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20201002 04:33:31.307" endtime="20201002 04:33:31.561"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_BUTTON}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:31.561" level="INFO">Clicking button 'xpath=//*[@id="wp-submit"]'.</msg>
+<status status="PASS" starttime="20201002 04:33:31.561" endtime="20201002 04:33:35.010"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${SIGNED_IN_MSG}</arg>
+</arguments>
+<status status="PASS" starttime="20201002 04:33:35.010" endtime="20201002 04:33:35.075"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:31.128" endtime="20201002 04:33:35.075"></status>
+</kw>
+<kw name="End Web Test" library="CommonWeb" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20201002 04:33:35.076" endtime="20201002 04:33:35.142"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:35.075" endtime="20201002 04:33:35.143"></status>
+</kw>
+<doc>This is Login in test</doc>
+<tags>
+<tag>login-test</tag>
+</tags>
+<status status="PASS" starttime="20201002 04:33:26.276" endtime="20201002 04:33:35.143" critical="yes"></status>
+</test>
+<test id="s1-s1-t10" name="Should be able to logout from &quot;Post A Job&quot; page">
+<kw name="Begin Web Test" library="CommonWeb" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:35.147" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20201002 04:33:35.147" endtime="20201002 04:33:36.892"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201002 04:33:36.893" endtime="20201002 04:33:37.010"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:35.146" endtime="20201002 04:33:37.010"></status>
+</kw>
+<kw name="Go to &quot;Post A Job&quot; Page" library="Actions">
+<kw name="Navigate To" library="PostAJob">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${POST_A_JOB_LINK}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:37.015" level="INFO">Opening url 'https://staging2.tlconsulting.com.au/post-a-job/'</msg>
+<status status="PASS" starttime="20201002 04:33:37.013" endtime="20201002 04:33:38.076"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:37.012" endtime="20201002 04:33:38.077"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201002 04:33:39.078" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201002 04:33:38.077" endtime="20201002 04:33:39.078"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:37.011" endtime="20201002 04:33:39.078"></status>
+</kw>
+<kw name="Sign In From &quot;Post A Job&quot; Page" library="Actions">
+<kw name="Click &quot;Sign in&quot; Link" library="PostAJob">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${SIGN_IN_LINK}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:39.081" level="INFO">Clicking link 'xpath=//*[@id="submit-job-form"]/fieldset/div/a'.</msg>
+<status status="PASS" starttime="20201002 04:33:39.080" endtime="20201002 04:33:40.293"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:39.079" endtime="20201002 04:33:40.293"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:39.079" endtime="20201002 04:33:40.293"></status>
+</kw>
+<kw name="Login User" library="CommonWeb">
+<kw name="Get Location" library="SeleniumLibrary">
+<doc>Returns the current browser window URL.</doc>
+<assign>
+<var>${CURRENT_URL}</var>
+</assign>
+<msg timestamp="20201002 04:33:40.302" level="INFO">${CURRENT_URL} = https://staging2.tlconsulting.com.au/wp-login.php?redirect_to=https%3A%2F%2Fstaging2.tlconsulting.com.au%2Fpost-a-job%2F</msg>
+<status status="PASS" starttime="20201002 04:33:40.294" endtime="20201002 04:33:40.302"></status>
+</kw>
+<kw name="Should Match" library="BuiltIn">
+<doc>Fails if the given ``string`` does not match the given ``pattern``.</doc>
+<arguments>
+<arg>${CURRENT_URL}</arg>
+<arg>pattern=https://staging2.tlconsulting.com.au/wp-login.php*</arg>
+</arguments>
+<status status="PASS" starttime="20201002 04:33:40.302" endtime="20201002 04:33:40.303"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_USER_FIELD}</arg>
+<arg>${LOGIN_USER}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:40.303" level="INFO">Typing text 'PSTester' into text field 'xpath=//*[@id="user_login"]'.</msg>
+<status status="PASS" starttime="20201002 04:33:40.303" endtime="20201002 04:33:40.407"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_PASSWORD_FIELD}</arg>
+<arg>${LOGIN_PASSWORD}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:40.408" level="INFO">Typing password into text field 'xpath=//*[@id="user_pass"]'.</msg>
+<msg timestamp="20201002 04:33:40.453" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20201002 04:33:40.545" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20201002 04:33:40.407" endtime="20201002 04:33:40.545"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_BUTTON}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:40.545" level="INFO">Clicking button 'xpath=//*[@id="wp-submit"]'.</msg>
+<status status="PASS" starttime="20201002 04:33:40.545" endtime="20201002 04:33:44.427"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${SIGNED_IN_MSG}</arg>
+</arguments>
+<status status="PASS" starttime="20201002 04:33:44.427" endtime="20201002 04:33:44.479"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:40.294" endtime="20201002 04:33:44.479"></status>
+</kw>
+<kw name="Logout User" library="CommonWeb">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${SIGNED_IN_MSG}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:44.494" level="INFO">Current page contains text 'You are currently signed in as'.</msg>
+<status status="PASS" starttime="20201002 04:33:44.479" endtime="20201002 04:33:44.494"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${LOG_OUT_LINK}</arg>
+</arguments>
+<msg timestamp="20201002 04:33:44.495" level="INFO">Clicking link 'xpath=//*[@id="submit-job-form"]/fieldset[1]/div/a'.</msg>
+<status status="PASS" starttime="20201002 04:33:44.494" endtime="20201002 04:33:45.715"></status>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<arguments>
+<arg>${SIGNED_IN_MSG}</arg>
+</arguments>
+<status status="PASS" starttime="20201002 04:33:45.716" endtime="20201002 04:33:45.726"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:44.479" endtime="20201002 04:33:45.726"></status>
+</kw>
+<kw name="End Web Test" library="CommonWeb" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20201002 04:33:45.727" endtime="20201002 04:33:45.793"></status>
+</kw>
+<status status="PASS" starttime="20201002 04:33:45.727" endtime="20201002 04:33:45.794"></status>
+</kw>
+<doc>This is Logout test</doc>
+<tags>
+<tag>logout-test</tag>
+</tags>
+<status status="PASS" starttime="20201002 04:33:35.144" endtime="20201002 04:33:45.794" critical="yes"></status>
+</test>
+<doc>This is the automation test suites for the TL company website</doc>
+<status status="PASS" starttime="20201002 04:32:17.401" endtime="20201002 04:33:45.797"></status>
+</suite>
+<status status="PASS" starttime="20201002 04:32:17.378" endtime="20201002 04:33:45.813"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="10" fail="0">Critical Tests</stat>
+<stat pass="10" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">career-job-board-test</stat>
+<stat pass="1" fail="0">career-navbar-test</stat>
+<stat pass="1" fail="0">devops-services-footer-test</stat>
+<stat pass="1" fail="0">home-page-about-test</stat>
+<stat pass="1" fail="0">home-page-test</stat>
+<stat pass="1" fail="0">knowledge-portal-test</stat>
+<stat pass="1" fail="0">login-test</stat>
+<stat pass="1" fail="0">logout-test</stat>
+<stat pass="1" fail="0">tech-partners-page-test</stat>
+</tag>
+<suite>
+<stat pass="10" fail="0" id="s1" name="Tests">Tests</stat>
+<stat pass="10" fail="0" id="s1-s1" name="Tl-Site">Tests.Tl-Site</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

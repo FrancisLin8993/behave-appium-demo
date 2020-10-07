@@ -23,12 +23,11 @@ steps:
   displayName: 'Install Appium'
 
 - script:
-    appium --app $APP_PATH &
+    appium &
   displayName: 'Start Appium Server'
-  env:
-    APP_PATH: $(Build.SourcesDirectory)/apps/ios/UIKitCatalog/UIKitCatalog-iphonesimulator.zip
+
 
 - bash:
-    behave --tags=@iOS
+    behave -n ios.feature
   displayName: 'Run Automation Testing Scripts'
 

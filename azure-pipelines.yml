@@ -16,10 +16,23 @@ steps:
 
 - script:
     pip install -r requirements.txt
-
   displayName: 'Install Python dependencies'
 
 - script:
     npm install -g appium
-
   displayName: 'Install Appium'
+
+- bash:
+    echo "y" | $ANDROID_HOME/tools/bin/sdkmanager --install 'system-images;android-30;google_apis;x86'
+  displayName: 'Install AVD files'
+
+- bash:
+    echo "no" | $ANDROID_HOME/tools/bin/avdmanager create avd -n xamarin_android_emulator -k 'system-images;android-30;google_apis;x86' --force
+  displayName: 'Create Android emulator'
+
+- bash:
+    nohup $ANDROID_HOME/emulator/emulator -avd xamarin_android_emulator -no-snapshot > /dev/null 2>&1 &
+    $ANDROID_HOME/platform-tools/adb wait-for-device shell 'while [[ -z $(getprop sys.boot_completed | tr -d '\r') ]]; do sleep 1; done; input keyevent 82'
+    $ANDROID_HOME/platform-tools/adb devices
+    echo "Emulator started"
+  displayName: 'Start emulator in the background'

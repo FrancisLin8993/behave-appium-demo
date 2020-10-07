@@ -24,7 +24,8 @@ def before_feature(context, feature):
                 'appActivity': '.ApiDemos',
                 'appPackage': 'io.appium.android.apis',
                 'automationName': 'UiAutomator2',
-                'uiautomator2ServerInstallTimeout': '60000'
+                'uiautomator2ServerInstallTimeout': '60000',
+                'ignoreHiddenApiPolicyError': 'true'
             }
         )
 

@@ -1,4 +1,4 @@
-@ios
+@iOS
 Feature: demo in iOS
 
   Scenario: run an iOS simple test

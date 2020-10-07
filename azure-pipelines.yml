@@ -29,6 +29,6 @@ steps:
     APP_PATH: $(Build.SourcesDirectory)/apps/ios/UIKitCatalog/UIKitCatalog-iphonesimulator.zip
 
 - bash:
-    behave
+    behave --tags=@iOS
   displayName: 'Run Automation Testing Scripts'
 

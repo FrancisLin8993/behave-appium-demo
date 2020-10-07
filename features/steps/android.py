@@ -2,6 +2,7 @@ from behave import *
 from time import sleep
 from appium.webdriver.common.touch_action import TouchAction
 
+
 @given('the Android app is launched')
 def step_impl(context):
     pass

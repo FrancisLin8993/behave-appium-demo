@@ -19,7 +19,7 @@ def before_feature(context, feature):
             desired_capabilities={
                 'app': app,
                 'platformName': 'Android',
-                'platformVersion': '10.0',
+                'platformVersion': '11.0',
                 'deviceName': 'emulator-5554',
                 'appActivity': '.ApiDemos',
                 'appPackage': 'io.appium.android.apis',

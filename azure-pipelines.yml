@@ -14,7 +14,12 @@ steps:
   inputs:
     versionSpec: '3.x'
 
-- script: |
+- script:
     pip install -r requirements.txt
-    pip list
-  displayName: 'Run tests'
+
+  displayName: 'Install Python dependencies'
+
+- script:
+    npm install -g appium
+
+  displayName: 'Install Appium'

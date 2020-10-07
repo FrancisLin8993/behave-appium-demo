@@ -23,7 +23,8 @@ def before_feature(context, feature):
                 'deviceName': 'emulator-5554',
                 'appActivity': '.ApiDemos',
                 'appPackage': 'io.appium.android.apis',
-                'automationName': 'UiAutomator2'
+                'automationName': 'UiAutomator2',
+                'uiautomator2ServerInstallTimeout': '60000'
             }
         )
 

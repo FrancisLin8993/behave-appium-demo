@@ -14,11 +14,6 @@ parse==1.18.0
 parse-type==0.5.2
 pluggy==0.13.1
 requests==2.24.0
-robotframework==3.2.2
-robotframework-appiumlibrary==1.5.0.6
-robotframework-pythonlibcore==2.1.0
-robotframework-requests==0.7.1
-robotframework-seleniumlibrary==4.5.0
 selenium==3.141.0
 six==1.15.0
 urllib3==1.25.10

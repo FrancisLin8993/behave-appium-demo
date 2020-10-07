@@ -23,7 +23,7 @@ steps:
   displayName: 'Install Appium'
 
 - script:
-    appium -app $APP_PATH &
+    appium --app $APP_PATH &
   displayName: 'Start Appium Server'
   env:
     APP_PATH: $(Build.SourcesDirectory)/apps/ios/UIKitCatalog/UIKitCatalog-iphonesimulator.zip

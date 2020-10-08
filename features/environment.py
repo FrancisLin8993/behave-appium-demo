@@ -14,7 +14,7 @@ def before_feature(context, feature):
         app = os.path.join(os.path.dirname(__file__), '../apps/ios/UIKitCatalog', 'UIKitCatalog-iphonesimulator.zip')
         app = os.path.abspath(app)
         context.driver = webdriver.Remote(
-            command_executor='http://127.0.0.1:4723/wd/hub',
+            command_executor='http://127.0.0.1:4724/wd/hub',
             desired_capabilities={
                 'app': app,
                 'platformName': 'iOS',

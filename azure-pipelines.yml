@@ -18,16 +18,44 @@ steps:
     pip install -r requirements.txt
   displayName: 'Install Python dependencies'
 
+- task: Cache@2
+  displayName: 'Caching System Images for AVD'
+  inputs:
+    key: 'AVD_IMAGES_PIXEL_30'
+    path: '$(ANDROID_HOME)/system-images'
+    cacheHitVar: 'AVD_IMAGES_RESTORED'
+  continueOnError: true
+  condition: succeededOrFailed()
+
 - script:
     npm install -g appium
   displayName: 'Install Appium'
 
 - script:
     appium &
-  displayName: 'Start Appium Server'
+  displayName: 'Start Appium Server Instance for Android emulator'
 
+- script:
+    appium -p 4724 &
+  displayName: 'Start Appium Server Instance for iOS simulator'
 
 - bash:
-    behave -e android.feature
+    echo "y" | $ANDROID_HOME/tools/bin/sdkmanager --install 'system-images;android-30;google_apis;x86'
+  displayName: 'Download and install AVD system image'
+  condition: ne(variables.AVD_IMAGES_RESTORED, 'true')
+
+- bash:
+    echo "no" | $ANDROID_HOME/tools/bin/avdmanager create avd -n android_emulator -k 'system-images;android-30;google_apis;x86' -d 17 --force
+  displayName: 'Create Google Pixel emulator'
+
+- bash: |
+    nohup $ANDROID_HOME/emulator/emulator -avd android_emulator -skin 1080x1920 -no-snapshot -no-audio -no-boot-anim -accel auto -gpu auto -qemu -lcd-density 420 > /dev/null 2>&1 &
+    $ANDROID_HOME/platform-tools/adb wait-for-device shell 'while [[ -z $(getprop sys.boot_completed | tr -d '\r') ]]; do sleep 1; done; input keyevent 82'
+    $ANDROID_HOME/platform-tools/adb devices
+    echo "Emulator started"
+  displayName: 'Start Android emulator in the background'
+
+- bash:
+    behave
   displayName: 'Run Automation Testing Scripts'
 

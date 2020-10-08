@@ -18,6 +18,10 @@ steps:
     pip install -r requirements.txt
   displayName: 'Install Python dependencies'
 
+- bash:
+    brew install allure
+  displayName: 'Install allure'
+
 - script:
     npm install -g appium
   displayName: 'Install Appium'
@@ -46,6 +50,6 @@ steps:
   displayName: 'Start Android emulator in the background'
 
 - bash:
-    behave
+    behave -f allure_behave.formatter:AllureFormatter -o ./allure-results ./features
   displayName: 'Run Automation Testing Scripts'
 

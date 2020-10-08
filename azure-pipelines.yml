@@ -18,15 +18,6 @@ steps:
     pip install -r requirements.txt
   displayName: 'Install Python dependencies'
 
-- task: Cache@2
-  displayName: 'Caching System Images for AVD'
-  inputs:
-    key: 'AVD_IMAGES_PIXEL_30'
-    path: '$(ANDROID_HOME)/system-images'
-    cacheHitVar: 'AVD_IMAGES_RESTORED'
-  continueOnError: true
-  condition: succeededOrFailed()
-
 - script:
     npm install -g appium
   displayName: 'Install Appium'
@@ -42,7 +33,6 @@ steps:
 - bash:
     echo "y" | $ANDROID_HOME/tools/bin/sdkmanager --install 'system-images;android-30;google_apis;x86'
   displayName: 'Download and install AVD system image'
-  condition: ne(variables.AVD_IMAGES_RESTORED, 'true')
 
 - bash:
     echo "no" | $ANDROID_HOME/tools/bin/avdmanager create avd -n android_emulator -k 'system-images;android-30;google_apis;x86' -d 17 --force

@@ -26,7 +26,7 @@ def before_feature(context, feature):
 
     elif 'android' in feature.tags:
         app = os.path.join(os.path.dirname(__file__),
-                           '../apps/',
+                           '../apps/Android/',
                            'ApiDemos-debug.apk')
         app = os.path.abspath(app)
         context.driver = webdriver.Remote(

@@ -53,3 +53,14 @@ steps:
     behave -f allure_behave.formatter:AllureFormatter -o ./allure-results ./features
   displayName: 'Run Automation Testing Scripts'
 
+- task: CopyFiles@2
+  inputs:
+    contents: 'allure-*/**'
+    targetFolder: $(Build.ArtifactStagingDirectory)
+  displayName: 'Copy allure reports to artifact publishing directory'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathToPublish: $(Build.ArtifactStagingDirectory)
+    artifactName: AllureReport
+

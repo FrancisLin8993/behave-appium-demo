@@ -28,6 +28,6 @@ steps:
 
 
 - bash:
-    behave -n ios.feature
+    behave -e android.feature
   displayName: 'Run Automation Testing Scripts'
 

@@ -31,7 +31,7 @@ def step_impl(context):
 @then('we can click the item in the iOS app')
 def step_impl(context):
     try:
-        el = context.driver.find_element_by_xpath('//*[@elementId="23000000-0000-0000-1845-000000000000"]')
+        el = context.driver.find_element_by_accessibility_id('Text Fields')
         el.click()
     except:
         pass

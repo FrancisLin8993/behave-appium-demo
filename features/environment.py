@@ -5,7 +5,7 @@ from appium import webdriver
 
 
 def before_all(context):
-    # context.config.setup_logging()
+    context.config.setup_logging()
     pass
 
 def before_feature(context, feature):

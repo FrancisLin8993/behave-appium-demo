@@ -1,6 +1,7 @@
 from behave import *
 from time import sleep
 from appium.webdriver.common.touch_action import TouchAction
+from selenium.common.exceptions import NoSuchElementException
 
 
 @given('the Android app is launched')
@@ -31,9 +32,9 @@ def step_impl(context):
 @then('we can click the item in the iOS app')
 def step_impl(context):
     try:
-        el = context.driver.find_element_by_accessibility_id('Text Fields')
-        el.click()
-    except:
-        pass
+        # Intentionally fail this test
+        el = context.driver.find_element_by_accessibility_id('Some Random Thing')
+    except NoSuchElementException:
+        raise
     finally:
         sleep(3)

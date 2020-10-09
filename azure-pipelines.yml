@@ -53,6 +53,10 @@ steps:
     behave -f allure_behave.formatter:AllureFormatter -o ./allure-results ./features
   displayName: 'Run Automation Testing Scripts'
 
+- bash:
+    allure serve ./allure-reports
+  displayName: 'Generate Allure Reports'
+
 - task: CopyFiles@2
   inputs:
     contents: 'allure-*/**'
@@ -63,4 +67,5 @@ steps:
   inputs:
     pathToPublish: $(Build.ArtifactStagingDirectory)
     artifactName: AllureReport
+  displayName: 'Publish Allure Result'
 

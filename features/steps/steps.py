@@ -33,7 +33,7 @@ def step_impl(context):
 def step_impl(context):
     try:
         # Intentionally fail this test
-        el = context.driver.find_element_by_accessibility_id('Some Random Thing')
+        element = context.driver.find_element_by_accessibility_id('Some Random Thing')
     except NoSuchElementException:
         raise
     finally:

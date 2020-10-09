@@ -49,14 +49,27 @@ steps:
     echo "Emulator started"
   displayName: 'Start Android emulator in the background'
 
+- task: DownloadSecureFile@1
+  name: testSettings # The name with which to reference the secure file's path on the agent, like $(mySecureFile.secureFilePath)
+  inputs:
+    secureFile: 'test_settings.json'
+  displayName: 'Download settings'
+
+- task: CopyFiles@2
+  inputs:
+    sourceFolder: $(Agent.TempDirectory)
+    contents: 'test_settings.json'
+    targetFolder: $(Build.SourcesDirectory)/settings
+  displayName: 'Copy settings file to the correct place'
+
 - bash:
     behave -f allure_behave.formatter:AllureFormatter -o ./allure-results ./features
   displayName: 'Run Automation Testing Scripts'
+  continueOnError: true
 
 - bash:
     allure serve ./allure-reports
   displayName: 'Generate Allure Reports'
-  continueOnError: true
 
 - task: CopyFiles@2
   inputs:

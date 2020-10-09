@@ -32,8 +32,7 @@ def step_impl(context):
 @then('we can click the item in the iOS app')
 def step_impl(context):
     try:
-        # Intentionally fail this test
-        element = context.driver.find_element_by_accessibility_id('Some Random Thing')
+        element = context.driver.find_element_by_accessibility_id('Text Fields')
     except NoSuchElementException:
         raise
     finally:

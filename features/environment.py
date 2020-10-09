@@ -82,7 +82,7 @@ def after_scenario(context, scenario):
         description = description.replace("<", "")
         description = description.replace(">", "")
 
-        jira.add_issue(scenario_name, description)
+        # jira.add_issue(scenario_name, description)
 
     logging.info("FINISHED scenario: " + scenario.name)
 

@@ -68,7 +68,7 @@ steps:
   continueOnError: true
 
 - bash:
-    allure serve ./allure-reports
+    allure generate ./allure-results -o ./allure-reports
   displayName: 'Generate Allure Reports'
 
 - task: CopyFiles@2

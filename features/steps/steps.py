@@ -16,10 +16,10 @@ def step_impl(context):
         actions = TouchAction(context.driver)
         actions.press(x=517, y=1635).move_to(x=525, y=753).release().perform()
 
-        text_el = context.driver.find_element_by_accessibility_id('Text')
+        text_el = context.driver.find_element_by_accessibility_id('Random')
         text_el.click()
-    except:
-        pass
+    except NoSuchElementException:
+        raise
     finally:
         sleep(3)
 

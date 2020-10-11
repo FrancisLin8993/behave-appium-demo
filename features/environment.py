@@ -10,7 +10,7 @@ from utilities.jira import jira
 from behave.model_core import Status
 
 def before_all(context):
-    jira.connect_to_jira()
+    #jira.connect_to_jira()
     pass
 
 def before_feature(context, feature):

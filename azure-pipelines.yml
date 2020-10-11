@@ -64,7 +64,7 @@ steps:
 
 - bash:
     behave -f allure_behave.formatter:AllureFormatter -o ./allure-results ./features
-  displayName: 'Run Automation Testing Scripts'
+  displayName: 'Run Automation Testing Scripts and generate Allure Results'
   continueOnError: true
 
 - bash:
@@ -75,23 +75,23 @@ steps:
   inputs:
     rootFolderOrFile: $(Build.SourcesDirectory)/allure-reports
     archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId)-allure-reports.zip
-  displayName: 'Archive allure reports'
+  displayName: 'Archive Allure reports'
 
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: $(Build.SourcesDirectory)/allure-results
     archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId)-allure-results.zip
-  displayName: 'Archive allure results'
+  displayName: 'Archive Allure results'
 
 - task: CopyFiles@2
   inputs:
     contents: 'allure-*.zip'
     targetFolder: $(Build.ArtifactStagingDirectory)
-  displayName: 'Copy allure reports to artifact publishing directory'
+  displayName: 'Copy Allure results and reports to artifact publishing directory'
 
 - task: PublishBuildArtifacts@1
   inputs:
     pathToPublish: $(Build.ArtifactStagingDirectory)
     artifactName: AllureReport
-  displayName: 'Publish Allure Result'
+  displayName: 'Publish Allure results and reports'
 

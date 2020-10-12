@@ -28,7 +28,7 @@ class Jira_utility():
         execution_status = status
 
     def add_issue(self, summary, description):
-        jira.create_issue(project='TAPT', summary=summary, description=description, issuetype={'name': 'Bug'})
+        return jira.create_issue(project='TAPT', summary=summary, description=description, issuetype={'name': 'Bug'})
 
 
     def transition_issue(context):
@@ -36,10 +36,10 @@ class Jira_utility():
         jira.transition_issue(issue, transition='Test in Progress')
         jira.transition_issue(issue, transition=execution_status)
 
-    def attach_screenshots_in_jira(context, attachment_path):
+    def attach_screenshots_in_jira(context, issue_to_attach, attachment_path):
         # for attachment in issue.fields.attachment:
         #     jira.delete_attachment(attachment['id'])
-        jira.add_attachment(issue=issue, attachment=attachment_path)
+        jira.add_attachment(issue=issue_to_attach, attachment=attachment_path)
 
     def add_comment(context):
         list_of_comments = jira.comments(issue)

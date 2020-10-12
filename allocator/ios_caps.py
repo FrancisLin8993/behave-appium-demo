@@ -9,5 +9,6 @@ ios_caps = {
                 'deviceName': 'iPhone 11',
                 'platformVersion': '13.7',
                 'automationName': 'XCUITest',
-                'noReset': 'true'
+                'noReset': 'true',
+                'isHeadless': 'true'
 }

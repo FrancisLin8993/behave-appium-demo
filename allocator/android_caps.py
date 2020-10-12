@@ -11,5 +11,6 @@ android_caps={
                 'platformVersion': '11.0',
                 'deviceName': 'emulator-5554',
                 'automationName': 'UiAutomator2',
-                'uiautomator2ServerInstallTimeout': '60000'
+                'uiautomator2ServerInstallTimeout': '60000',
+                'noReset': 'true'
 }

@@ -73,13 +73,13 @@ jobs:
     - task: ArchiveFiles@2
       inputs:
         rootFolderOrFile: $(Build.SourcesDirectory)/allure-reports
-        archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId)-allure-reports.zip
+        archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId)-$(Agent.JobName)-allure-reports.zip
       displayName: 'Archive Allure reports'
 
     - task: ArchiveFiles@2
       inputs:
         rootFolderOrFile: $(Build.SourcesDirectory)/allure-results
-        archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId)-allure-results.zip
+        archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId)-$(Agent.JobName)-allure-results.zip
       displayName: 'Archive Allure results'
 
     - task: CopyFiles@2
@@ -134,7 +134,7 @@ jobs:
       displayName: 'Copy settings file to the correct place'
 
     - bash:
-        behave -e android.feature -f allure_behave.formatter:AllureFormatter -o ./allure-results ./features
+        behave -e android* -f allure_behave.formatter:AllureFormatter -o ./allure-results ./features
       displayName: 'Run Automation Testing Scripts and generate Allure Results'
       continueOnError: true
 

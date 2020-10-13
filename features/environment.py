@@ -11,7 +11,6 @@ from capabilities.ios_caps import ios_caps
 from capabilities.android_caps import android_caps
 from utilities.jira import jira
 from behave.model_core import Status
-from baseObjects.baseMethods import BaseMethods
 
 
 def before_all(context):

@@ -7,10 +7,11 @@ from appium import webdriver
 from allure_commons._allure import attach
 from allure_commons.types import AttachmentType
 
-from allocator.ios_caps import ios_caps
-from allocator.android_caps import android_caps
+from capabilities.ios_caps import ios_caps
+from capabilities.android_caps import android_caps
 from utilities.jira import jira
 from behave.model_core import Status
+from baseObjects.baseMethods import BaseMethods
 
 
 def before_all(context):
@@ -18,6 +19,8 @@ def before_all(context):
     pass
 
 def before_feature(context, feature):
+
+    context.driver = None
 
     if 'iOS' in feature.tags:
         context.driver = webdriver.Remote(

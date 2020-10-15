@@ -11,10 +11,15 @@ from capabilities.ios_caps import ios_caps
 from capabilities.android_caps import android_caps
 from utilities.jira import jira
 from behave.model_core import Status
+from appiumServer.appium_server import AppiumServer
 
+#appium_instance = AppiumServer()
 
 def before_all(context):
     #jira.connect_to_jira()
+    #global appium_instance
+    #appium_instance = AppiumServer()
+    #appium_instance.appium_server.start()
     pass
 
 def before_feature(context, feature):
@@ -32,6 +37,11 @@ def before_feature(context, feature):
             desired_capabilities=android_caps)
 
 
+def after_all(context):
+
+    # global appium_instance
+    # appium_instance.appium_server.stop()
+    pass
 
 def after_feature(context, feature):
     context.driver.quit()

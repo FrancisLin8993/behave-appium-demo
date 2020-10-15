@@ -13,5 +13,5 @@ android_caps={
                 'automationName': 'UiAutomator2',
                 'uiautomator2ServerInstallTimeout': '60000',
                 'noReset': 'true',
-                'isHeadless': 'true'
+                'systemPort': '8200'
 }
